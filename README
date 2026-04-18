@@ -2,8 +2,6 @@
 
 > Dashboard analítico interativo com indicadores macroeconômicos de 20 economias globais no período pós-pandemia (2020–2024).
 
-![Dashboard Preview](dashboard_preview.png)
-
 ## 🔗 Demo ao vivo
 
 **[inflation-dashboard-kaggledatabase.streamlit.app](https://inflation-dashboard-kaggledatabase.streamlit.app)**
