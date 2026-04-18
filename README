@@ -1,0 +1,120 @@
+# 📈 Global Inflation Dashboard — Post-COVID Era
+
+> Dashboard analítico interativo com indicadores macroeconômicos de 20 economias globais no período pós-pandemia (2020–2024).
+
+![Dashboard Preview](dashboard_preview.png)
+
+## 🔗 Demo ao vivo
+
+**[inflation-dashboard-kaggledatabase.streamlit.app](https://inflation-dashboard-kaggledatabase.streamlit.app)**
+
+---
+
+## 📊 Visão geral
+
+Este projeto visualiza o impacto econômico do período pós-COVID em 20 países, analisando indicadores como inflação (CPI), juros, desemprego, PIB, preço do petróleo e índice de preços de alimentos. O dashboard foi construído com **Streamlit** e **Plotly**, oferecendo filtros dinâmicos e visualizações interativas.
+
+---
+
+## 🌍 Países analisados
+
+| Código | País | Código | País |
+|--------|------|--------|------|
+| ARG | Argentina | JPN | Japan |
+| AUS | Australia | KOR | South Korea |
+| BRA | Brazil | MEX | Mexico |
+| CAN | Canada | PHL | Philippines |
+| CHN | China | RUS | Russia |
+| EU | European Union | SAU | Saudi Arabia |
+| GBR | United Kingdom | THA | Thailand |
+| IDN | Indonesia | TUR | Turkey |
+| IND | India | USA | United States |
+| — | — | VNM | Vietnam |
+| — | — | ZAF | South Africa |
+
+---
+
+## 📐 Indicadores disponíveis
+
+- **Inflation Rate (%)** — Taxa de inflação mensal
+- **Interest Rate (%)** — Taxa de juros
+- **GDP Growth (%)** — Crescimento do PIB
+- **Unemployment Rate (%)** — Taxa de desemprego
+- **Oil Price (USD)** — Preço do petróleo
+- **Food Price Index** — Índice de preços de alimentos
+- **Supply Chain Index** — Índice de cadeia de suprimentos
+- **Money Supply M2** — Oferta monetária M2
+
+---
+
+## 📉 Visualizações
+
+| Gráfico | Descrição |
+|---------|-----------|
+| KPIs | Inflação, juros, desemprego, PIB e petróleo médios com delta vs. global |
+| Linha temporal | Evolução do indicador selecionado por país ao longo do tempo |
+| Heatmap por ano | Comparação país × ano com escala de cor |
+| Barras agrupadas | Ranking de países por inflação, juros e desemprego |
+| Bubble chart | Relação inflação × juros, tamanho = desemprego, cor = PIB |
+| Correlation matrix | Correlações entre todos os indicadores macroeconômicos |
+| Oil vs Inflation | Eixo duplo: preço do petróleo e inflação no tempo |
+| Violin plot | Distribuição do indicador selecionado por país |
+| GDP vs Unemployment | Barras de crescimento do PIB + linha de desemprego |
+| Tabela resumo | Médias por país com gradiente de cor |
+
+---
+
+## 🛠️ Tecnologias
+
+- [Python 3.10+](https://www.python.org/)
+- [Streamlit](https://streamlit.io/) — framework de dashboard
+- [Plotly](https://plotly.com/python/) — visualizações interativas
+- [Pandas](https://pandas.pydata.org/) — manipulação de dados
+- [NumPy](https://numpy.org/) — operações numéricas
+
+---
+
+## 🚀 Como rodar localmente
+
+**1. Clone o repositório**
+```bash
+git clone https://github.com/devJoaoVCosta/inflation-dashboard.git
+cd inflation-dashboard
+```
+
+**2. Instale as dependências**
+```bash
+pip install -r requirements.txt
+```
+
+**3. Coloque o dataset na pasta do projeto**
+
+Baixe o arquivo `global_inflation_post_covid.csv` no [Kaggle](https://www.kaggle.com/datasets/ssssws/global-inflation-dynamics-post-covid-20202024) e coloque na mesma pasta que o `dashboard.py`.
+
+**4. Execute o dashboard**
+```bash
+python -m streamlit run dashboard.py
+```
+
+Acesse em `http://localhost:8501`
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+inflation-dashboard/
+├── dashboard.py                        # App principal Streamlit
+├── requirements.txt                    # Dependências Python
+├── global_inflation_post_covid.csv     # Dataset (Kaggle)
+└── README.md                           # Este arquivo
+```
+
+---
+
+## 🗂️ Dataset
+
+- **Fonte:** [Kaggle — Global Inflation Dynamics Post-COVID 2020–2024](https://www.kaggle.com/datasets/ssssws/global-inflation-dynamics-post-covid-20202024)
+- **Período:** Janeiro 2020 – Dezembro 2024
+- **Registros:** 100.000 linhas × 11 colunas
+- **Granularidade:** Mensal por país
